@@ -33,21 +33,21 @@ export const HEADER: Header = {
 };
 
 // NAVBAR //
-export interface NabNav{
+export interface NavbarConfig {
     bg: string;
     text: string;
     hover: string;
     img: string;
 }
 
-export const NAVBAR:NabNav = {
+export const NAVBAR: NavbarConfig = {
     bg: "",
     text: "text-pink-400",
     hover: "",
     img: "images/logo-2.png",
 }
 
-export const NAVBARADMIN:NabNav = {
+export const NAVBARADMIN: NavbarConfig = {
     bg: "",
     text: "text-pink-400",
     hover: "",
@@ -224,8 +224,8 @@ export interface BannerData {
 export const BANNERDATA: BannerData = {
    titleColor:"",
    textColor:"",
-   textBtnOne:"Get A Qutoe",
-   textBtnTwo:"Abour Us",
+   textBtnOne:"Get A Quote",
+   textBtnTwo:"About Us",
    textBtnColorOne:"",
    textBtnColorTwo:"",
    bgColorBtnOne:"",

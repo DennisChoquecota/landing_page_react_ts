@@ -4,7 +4,12 @@ import SocialFooter from "./SocialFooter";
 
 function Footer() {
   return (
-    <footer className={`${FOOTDATA.textColor === ""? "text-black" : FOOTDATA.textColor} pt-5 lg:pt-15 relative bg-bottom bg-cover bg-no-repeat`}  style={{ backgroundImage: FOOTDATA.backgroundImage }}>
+    <footer
+      className={`${
+        FOOTDATA.textColor === "" ? "text-black" : FOOTDATA.textColor
+      } pt-5 lg:pt-15 relative bg-bottom bg-cover bg-no-repeat`}
+      style={{ backgroundImage: FOOTDATA.backgroundImage }}
+    >
       <div className="relative z-[1] max-w-screen-xl mx-auto px-4 pb-5">
         <div className="grid grid-cols-12 md:gap-7.5 gap-5">
           {/* Company Section */}
@@ -50,21 +55,26 @@ function Footer() {
           {/* Contact Section */}
           <div className="lg:col-span-4 sm:col-span-6 col-span-12">
             <div>
-              <h3 className="mb-5 md:mb-7.5 text-base md:text-lg font-bold font-nunito uppercase">Contáctanos</h3>
+              <h3 className="mb-5 md:mb-7.5 text-base md:text-lg font-bold font-nunito uppercase">
+                Contáctanos
+              </h3>
               <ul className="space-y-5">
                 <li className="relative pl-4.75 text-sm leading-6 font-lato">
                   <i className="ti-location-pin absolute left-0 top-1.5 text-xl"></i>
-                  <strong className="pl-1">DIRECCIÓN</strong><br />
+                  <strong className="pl-1">DIRECCIÓN</strong>
+                  <br />
                   {HEADER.location}
                 </li>
                 <li className="relative pl-4.75 text-sm leading-6 font-lato">
                   <i className="ti-mobile absolute left-0 top-1.5 text-xl"></i>
-                  <strong className="pl-1">TELÉFONO</strong><br />
-                  { HEADER.cellphone }
+                  <strong className="pl-1">TELÉFONO</strong>
+                  <br />
+                  {HEADER.cellphone}
                 </li>
                 <li className="relative pl-4.75 text-sm leading-6 font-lato">
                   <i className="ti-email absolute left-0 top-1.5 text-xl"></i>
-                  <strong className="pl-1">CORREO</strong><br />
+                  <strong className="pl-1">CORREO</strong>
+                  <br />
                   {HEADER.email}
                 </li>
               </ul>
@@ -74,10 +84,10 @@ function Footer() {
           {/* Newsletter Section */}
           <div className="lg:col-span-4 lg:col-start-9 col-span-12">
             <div className="mb-12">
-              <h3 className="mb-5 md:mb-8 text-base md:text-lg font-bold font-nunito uppercase">{FOOTDATA.subTitleEnd}</h3>
-              <p className="mb-5 text-sm leading-6">
-                {FOOTDATA.textEnd}
-              </p>
+              <h3 className="mb-5 md:mb-8 text-base md:text-lg font-bold font-nunito uppercase">
+                {FOOTDATA.subTitleEnd}
+              </h3>
+              <p className="mb-5 text-sm leading-6">{FOOTDATA.textEnd}</p>
               <form className="flex gap-2 mb-5" method="post">
                 {/* <input type="email" className="flex-auto border-2 rounded-3xl px-5 py-2.5 text-sm" placeholder="Your Email Address" required /> */}
                 <Button variant="secondary">Suscribirse</Button>
@@ -86,7 +96,7 @@ function Footer() {
                 {FOOTDATA.socialItems.map((item, idx) => (
                   <SocialFooter
                     key={idx}
-                    ref={item.socialRef}
+                    url={item.socialRef}
                     icon={item.socialIcon}
                     style={item.socialStyle}
                   />
