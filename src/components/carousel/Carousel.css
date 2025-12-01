@@ -1,0 +1,23 @@
+.shadow-cardicon {
+    --tw-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
+    --tw-shadow-colored: 0 0 30px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.text-4\.75xl {
+    font-size: 40px;
+}
+
+.text-4\.5xl{
+  font-size: 42px;
+}
+
+/* Aun por revisar */
+.text-4\.5xl\/\[48px\]{
+  font-size: 42px;
+  line-height: 48px;
+}
+
+.text-4\.75xl{
+  font-size: 40px;
+}
