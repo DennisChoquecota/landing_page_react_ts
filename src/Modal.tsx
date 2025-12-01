@@ -1,4 +1,4 @@
-import { Component, useEffect, type ReactNode, type RefObject } from "react";
+import { useEffect, type ReactNode, type RefObject } from "react";
 // import Button from "./Button";
 
 interface ModalProps {

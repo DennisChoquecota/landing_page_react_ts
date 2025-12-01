@@ -29,7 +29,7 @@ function reducer(state: IState, action: IAction) {
   }
 }
 
-export default function useFetch<T>(
+export default function useFetch(
   url: string,
   initialState: IState,
   options?: RequestInit | undefined

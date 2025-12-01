@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { PORTFOLIODATA } from "../../db/db";
 
@@ -13,7 +13,7 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
 export default function GalleryModal() {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
-  const allImages = PORTFOLIODATA.items.flatMap(item => item.images);
+  const allImages = PORTFOLIODATA.items.flatMap((item) => item.images);
 
   let loop = true;
   if (allImages.length <= 4) {
@@ -59,7 +59,7 @@ export default function GalleryModal() {
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper"
         breakpoints={{
-          0: { slidesPerView: (allImages.length < 4) ? allImages.length : 4 },
+          0: { slidesPerView: allImages.length < 4 ? allImages.length : 4 },
         }}
       >
         {allImages.map((img, i) => (
